@@ -1,13 +1,257 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BCU Fashion | Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    
+
+    body {
+      background-color: #ffffff;
+      color: #222;
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 36px;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+
+    nav {
+      margin-top: 20px;
+    }
+
+    nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- MAIN LAYOUT ---------- */
+    .container {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 40px;
+      padding: 40px;
+    }
+
+    /* ---------- SIDEBAR ---------- */
+    .sidebar h3 {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .sidebar section {
+      margin-bottom: 30px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar li {
+      margin-bottom: 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .sidebar li:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- SHOP HEADER ---------- */
+    .shop-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .shop-header h2 {
+      font-size: 28px;
+      font-weight: 500;
+    }
+
+    .sort {
+      font-size: 14px;
+    }
+
+    /* ---------- PRODUCT GRID ---------- */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    .product {
+      position: relative;
+    }
+
+    .product img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      background: #f2f2f2;
+    }
+
+    .product a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .product a:hover h4 {
+      text-decoration: underline;
+    }
+
+
+    .badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #5f7c6b;
+      color: #fff;
+      font-size: 12px;
+      padding: 5px 10px;
+    }
+
+    .product h4 {
+      margin-top: 10px;
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    .product p {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
 <body>
 
-<h1>aws project</h1>
-<h2>game website creation imminent</h2>
-<p>get example html to copy</p>
-<p>testing new text for aws ci/cd1.2</p>
-<p>extra text for comfort</p>
-<p>20/01/2025</p>
+  <!-- HEADER -->
+  <header>
+    <h1>BCU Fashion</h1>
+    <nav>
+      <a href="#">SHOP</a>
+      <a href="#">ABOUT</a>
+      <a href="#">JOURNAL</a>
+      <a href="#">CONTACT</a>
+    </nav>
+  </header>
 
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <section>
+        <h3>Browse by</h3>
+        <ul>
+          <li><strong>All Products</strong></li>
+          <li>Featured Items</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Filter by</h3>
+        <ul>
+          <li>Product Type</li>
+          <li>Price</li>
+          <li>Color</li>
+          <li>Size</li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- SHOP AREA -->
+    <section>
+      <div class="shop-header">
+        <h2>All Products</h2>
+        <div class="sort">Sort by: Recommended</div>
+      </div>
+
+      <div class="products">
+
+        <div class="product">
+          <span class="badge">Best Seller</span>
+          <a href="blue-shirt.html">
+            <img src="images/oxford-button-down-shirt.png" alt="Product 1">
+            <h4>Blue Button Down Shirt</h4>
+          </a>
+          <p>£14.99</p>
+        </div>
+
+        <div class="product">
+          <a href="white-shirt.html">
+            <img src="images/oxford-white-button-down-shirt.png" alt="Product 4">
+            <h4>White Button Down Shirt</h4>
+          </a>
+          <p>£14.99</p>
+        </div>
+
+        <div class="product">
+          <a href="knitted-jumper.html">
+            <img src="images/green-knitted-jumper.jpg" alt="Product 2">
+            <h4>Knitted Crewneck</h4>
+          </a>
+          <p>£49.99</p>
+        </div>
+
+        <div class="product">
+          <a href="short-bag.html">
+            <img src="images/shorthauler-bag.png" alt="Product 3">
+            <h4>Shorthauler Bag</h4>
+          </a>
+          <p>£29.99</p>
+        </div>
+
+        <div class="product">
+          <a href="silk-tie.html">
+            <img src="images/silk-tie.png" alt="Product 4">
+            <h4>Silk Tie</h4>
+          </a>
+          <p>£7.99</p>
+        </div>
+        
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 BCU Fashion. All rights reserved.
+  </footer>
 
 </body>
 </html>
